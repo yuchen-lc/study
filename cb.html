@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="http://static4.niwodai.com/Public/Static/201404/css/common.css?v=20170223040107.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://static4.niwodai.com/Public/Static/201404/js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		function a(callback){ 
+			callback();
+}  
+function b(){  
+    alert("我来自子（回调）函数 b");  
+  
+}  
+  
+function c(){  
+    alert("我来自子（回调）函数 c");  
+    }  
+      
+      
+    function test(){  
+      
+        a(b);  
+          
+
+    }  
+    test()
+	</script>
+</body>
+</html>

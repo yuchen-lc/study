@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>利用console.time优化js代码</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script type="text/javascript" src="http://static4.niwodai.com/Public/Static/201404/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	利用console.time优化js代码
+    <script type="text/javascript">
+        function test1(){
+            console.time(3);
+            var iNum1 = 1,iNum2 = 2;
+            if(iNum1 > iNum2){
+                var iMax = iNum1;
+            }else{
+                var iMax = iNum2;
+            }
+            console.timeEnd(3);
+        }
+        function test2(){
+            console.time(2);
+            var iNum1 = 1,iNum2 = 2;
+            var iMax = (iNum1 > iNum2) ? iNum1 : iNum2;
+            console.timeEnd(2);
+        }
+        test1();
+        test2();
+    </script>
+</body>
+</html>
